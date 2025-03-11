@@ -1,11 +1,10 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   output: 'export',
-  distDir: 'docs', // GitHub Pages hanya membaca dari folder 'docs'
+  distDir: 'docs', // Agar GitHub Pages bisa membaca hasil build
   images: {
-    unoptimized: true, // Diperlukan jika menggunakan Next.js Image
+    unoptimized: true, // Jika menggunakan Next.js Image
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
